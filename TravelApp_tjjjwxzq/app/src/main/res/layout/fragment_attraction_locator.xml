@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation = "vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation = "horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_places"
+            android:hint="@string/lochint"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Clear EditText-->
+        <ImageButton
+            android:id="@+id/btn_clear_edittext"
+            android:src="@drawable/abc_ic_clear_mtrl_alpha"
+            android:tint="@color/colorLightGrey"
+            android:tintMode="src_atop"
+            android:background="@null"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <!-- Find the location on the map-->
+        <ImageButton
+            android:id="@+id/btn_findloc"
+            android:src="@drawable/search_icon_nobg"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/powered_by_google_light"/>
+
+    <LinearLayout
+        android:id="@+id/loc_linearlayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/place_details"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.8"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btn_addtoit"
+            android:src="@drawable/add_icon"
+            android:tint="@color/colorAccent"
+            android:tintMode="src_atop"
+            android:background="@null"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
